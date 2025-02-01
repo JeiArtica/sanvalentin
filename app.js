@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Cambiamos el texto en el botón "No"
         this.textContent = textos[index];
 
-        // Cambiamos la imagen
-        msmGif.src = (index + 1) + ".gif";  // Cambia la imagen según el índice
+        // Cambiamos la imagen según el nombre de archivo
+        let imagenes = ["uno.gif", "dos.gif", "tres.gif", "cuatro.gif", "cinco.gif"];
+        msmGif.src = imagenes[index];  // Cambia la imagen según el índice
 
         // Aumentamos el índice
         index++;
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $("#msmGif").addClass("d-none");
         
         pregunta.textContent = "Sabía que dirías que sí ❤️!";
-       $("#endGif").removeClass("d-none");
+        $("#endGif").removeClass("d-none");
 
         // Llamamos a la función de confeti
         lanzarConfeti();
